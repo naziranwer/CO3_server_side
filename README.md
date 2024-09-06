@@ -9,18 +9,6 @@ Welcome to the **Coin Tapper Server**, a powerful backend service that integrate
 - **Telegram Bot Integration**: Interact with users directly via Telegram for a seamless experience.
 - **Error Handling & Logs**: Detailed error messages and logs for easy troubleshooting.
 
-## Table of Contents
-
-- [Prerequisites](#prerequisites)
-- [Setup](#setup)
-- [Environment Variables](#environment-variables)
-- [Running the Server](#running-the-server)
-- [GraphQL API Endpoints](#graphql-api-endpoints)
-- [Telegram Bot Usage](#telegram-bot-usage)
-- [Error Handling](#error-handling)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
@@ -34,8 +22,8 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/coin-tapper-server.git
-   cd coin-tapper-server
+   git clone https://github.com/naziranwer/CO3_server_side.git
+
    ```
 
 2. **Install dependencies**:yarn
@@ -44,6 +32,9 @@ Before you begin, ensure you have the following installed:
 ## Environment Variables
 
 Create a .env file in the root directory and add the following environment variables:
+
 SUPABASE_URL=your-supabase-url
+
 SUPABASE_KEY=your-supabase-key
+
 BOT_TOKEN=your-telegram-bot-token
