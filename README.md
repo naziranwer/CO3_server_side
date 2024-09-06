@@ -26,7 +26,7 @@ Before you begin, ensure you have the following installed:
 
    ```
 
-2. **Install dependencies**:yarn
+2. **Install dependencies**: yarn
 3. **Run the Server**: yarn dev
 
 ## Environment Variables
