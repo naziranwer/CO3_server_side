@@ -1,12 +1,10 @@
 import { Telegraf } from "telegraf";
 import dotenv from "dotenv";
-// Load environment variables from .env file
 dotenv.config();
 
 // Initialize bot with token from environment variable
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-// Your web app URL
 const web_url = "https://co3-client.onrender.com";
 
 bot.start(async (ctx) => {
@@ -18,7 +16,6 @@ bot.start(async (ctx) => {
 
     console.log("User Info:", { userId, firstName, lastName, username });
 
-    // Construct the URL with Telegram user info
     const webAppUrl = `${web_url}?user_id=${userId}&first_name=${encodeURIComponent(
       firstName || ""
     )}&last_name=${encodeURIComponent(
@@ -27,7 +24,6 @@ bot.start(async (ctx) => {
 
     console.log("Web App URL:", webAppUrl);
 
-    // Send welcome message with web app button
     await ctx.reply("Welcome! Click the button to open the web app.", {
       reply_markup: {
         keyboard: [
@@ -46,7 +42,6 @@ bot.start(async (ctx) => {
   }
 });
 
-// Launch bot
 bot.launch().catch((error) => {
   console.error("Error launching bot:", error);
 });

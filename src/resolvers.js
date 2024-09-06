@@ -43,7 +43,6 @@ export const resolvers = {
           .single();
 
         if (error && error.code !== "PGRST116") {
-          // Ignore `PGRST116` error which means no rows found
           console.error(`Error fetching coins: ${error.message}`);
           throw new Error(`Unable to fetch coins: ${error.message}`);
         }
@@ -64,7 +63,7 @@ export const resolvers = {
           return "New user created and coin count set to 1.";
         }
 
-        // User exists, update coin count
+        // If User exists, update coin count
         const newCoins = data.coins + 1;
 
         // Update coins
@@ -79,7 +78,6 @@ export const resolvers = {
           throw new Error(`Unable to update coins: ${updateError.message}`);
         }
 
-        // Return success message
         return "Coin count updated successfully.";
       } catch (error) {
         console.error(`Error in tapCoin resolver: ${error.message}`);
