@@ -1,0 +1,23 @@
+{
+  "name": "serverside",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^10.0.6",
+    "@supabase/supabase-js": "^2.45.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-yoga": "^5.7.0",
+    "nodemon": "^3.1.4",
+    "telegraf": "^4.16.3"
+  }
+}
